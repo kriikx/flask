@@ -102,7 +102,7 @@ python app.py
 
 ##  Author
 
-Kumar Krish
+-> Kumar Krish
 
 
 ---

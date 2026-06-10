@@ -102,9 +102,8 @@ python app.py
 
 ##  Author
 
-**__Krish__**
+**Kumar Krish **
 
-*  Instagram: https://instagram.com/kriikx
 
 ---
 

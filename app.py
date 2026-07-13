@@ -1,4 +1,4 @@
-from flask import Flask, redirect, render_template,request
+from flask import Flask, redirect, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -6,6 +6,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todos.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+
 
 class Todo(db.Model):
     sno = db.Column(db.Integer, primary_key=True)
@@ -16,17 +17,24 @@ class Todo(db.Model):
     def __repr__(self) -> str:
         return f"{self.sno} - {self.title}"
 
-@app.route('/' , methods=['GET','POST'])
+
+@app.route('/', methods=['GET', 'POST'])
 def hello_world():
     if request.method == 'POST':
-        title = request.form['title']
-        desc = request.form['desc']
-        todo = Todo(title=title, desc=desc)
-        db.session.add(todo)
-        db.session.commit()
-    allTodo = Todo.query.all()
+        title = request.form.get('title', '').strip()
+        desc = request.form.get('desc', '').strip()
+
+        if title:  # don't insert empty/garbage rows
+            todo = Todo(title=title, desc=desc)
+            db.session.add(todo)
+            db.session.commit()
+
+        # redirect after POST -> prevents resubmission on refresh
+        return redirect('/')
+
+    allTodo = Todo.query.order_by(Todo.sno.desc()).all()
     return render_template('index.html', allTodo=allTodo)
-    
+
 
 @app.route('/show')
 def products():
@@ -34,27 +42,37 @@ def products():
     print(allTodo)
     return 'this is products page'
 
+
 @app.route("/about")
 def about():
     return render_template("about.html")
 
+
 @app.route('/update/<int:sno>', methods=['GET', 'POST'])
 def update(sno):
     todo = Todo.query.filter_by(sno=sno).first()
+
+    if todo is None:
+        return redirect('/')
+
     if request.method == 'POST':
-        todo.title = request.form['title']
-        todo.desc = request.form['desc']
+        todo.title = request.form.get('title', todo.title).strip()
+        todo.desc = request.form.get('desc', todo.desc).strip()
         db.session.commit()
         return redirect('/')
+
     return render_template('update.html', todo=todo)
+
 
 @app.route('/delete/<int:sno>')
 def delete(sno):
     todo = Todo.query.filter_by(sno=sno).first()
-    db.session.delete(todo)
-    db.session.commit()
-    return redirect('/')
 
+    if todo is not None:
+        db.session.delete(todo)
+        db.session.commit()
+
+    return redirect('/')
 
 
 if __name__ == '__main__':

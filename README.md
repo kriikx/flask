@@ -1,110 +1,158 @@
-# 📝 MyTodo – Task Management Web App
+# 📝 MyTodo - Flask Todo Application
 
-##  Overview
-
-**MyTodo** is a lightweight and efficient task management web application built using **Flask** and **SQLite**. It enables users to create, update, and delete tasks with a clean and intuitive interface,helping streamline daily productivity.
+A clean and responsive Todo web application built using **Flask**, **SQLAlchemy**, **SQLite**, and **Bootstrap 5**. It allows users to efficiently manage daily tasks with full CRUD functionality in a simple and intuitive interface.
 
 ---
 
-##  Features
+## 🚀 Features
 
-*  Add new tasks with title and description.
-*  Update existing tasks dynamically.
-*  Delete completed or unnecessary tasks.
-*  Dark mode support.
-*  Toast notifications for user feedback.
-*  Responsive UI built with Bootstrap.
-
----
-
-##  Tech Stack
-
-| Technology | Purpose             |
-| ---------- | ------------------- |
-| Python     | Backend logic       |
-| Flask      | Web framework       |
-| SQLite     | Database            |
-| HTML/CSS   | Structure & styling |
-| Bootstrap  | UI component       |
-| JavaScript | Interactivity       |
+- ➕ Add new tasks
+- 📝 Update existing tasks
+- 🗑️ Delete tasks
+- 📋 View all tasks
+- 🔍 Live task search
+- 🌙 Dark mode support
+- 📱 Responsive Bootstrap 5 UI
+- 💾 SQLite database integration
+- ⚡ Fast and lightweight Flask backend
 
 ---
 
-##  Project Structure
+## 🛠️ Tech Stack
 
-```
-project/
-│
+### Backend
+- Python
+- Flask
+- Flask-SQLAlchemy
+- SQLite
+
+### Frontend
+- HTML5
+- CSS3
+- Bootstrap 5
+- Bootstrap Icons
+- JavaScript
+
+---
+
+## 📂 Project Structure
+
+```text
+flask/
 ├── app.py
-├── todos.db
+├── requirements.txt
+├── README.md
+├── LICENSE
 ├── templates/
 │   ├── index.html
 │   ├── update.html
 │   └── about.html
-│
-└── static/
-    ├── style.css
-    └── script.js
+└── .gitignore
 ```
 
 ---
 
-##  Installation & Setup
+## ⚙️ Installation
 
-### 1️. Clone the repository
+### 1. Clone the repository
 
-```
-git clone https://github.com/your-username/mytodo.git
-cd mytodo
-```
-
-### 2️. Create virtual environment
-
-```
-python -m venv env
-env\Scripts\activate   # Windows
+```bash
+git clone https://github.com/kriikx/flask.git
 ```
 
-### 3️. Install dependencies
+### 2. Go to the project folder
 
-```
-pip install flask flask_sqlalchemy
+```bash
+cd flask
 ```
 
-### 4️. Run the application
+### 3. Create a virtual environment (optional)
 
+```bash
+python -m venv venv
 ```
+
+### 4. Activate the virtual environment
+
+**Windows**
+
+```bash
+venv\Scripts\activate
+```
+
+**Linux/macOS**
+
+```bash
+source venv/bin/activate
+```
+
+### 5. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 6. Run the application
+
+```bash
 python app.py
 ```
 
 ---
 
-##  Usage
+## 🌐 Open in Browser
 
-* Open browser and go to:
-  **http://127.0.0.1:5000/**
-* Add, update, and manage your tasks easily.
-
----
-
+```
+http://127.0.0.1:5000
+```
 
 ---
 
-##  Future Improvements
+## 📸 Preview
 
-*  User authentication (login/signup)
-*  AJAX (no page reload)
-*  Task deadlines & priorities
-*  Cloud deployment
-*  Dashboard analytics
 
----
-
-##  Author
-
--> Kumar Krish
+<img width="1827" height="894" alt="Screenshot 2026-07-13 184223" src="https://github.com/user-attachments/assets/06caf492-1d8e-4676-a9fd-24688c24231e" />
 
 
 ---
 
-##  
+## 🎯 Future Improvements
+
+- ✅ User Authentication
+- 📅 Due Dates
+- ⭐ Task Priorities
+- 📂 Categories
+- 📊 Dashboard & Statistics
+- ☁️ Cloud Database Support
+- 📱 Progressive Web App (PWA)
+
+---
+
+## 🤝 Contributing
+
+Contributions, suggestions, and improvements are welcome.
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Developer
+
+**Krish**
+
+GitHub: https://github.com/kriikx
+
+Instagram: https://instagram.com/kriikx
+
+---
+
+⭐ If you found this project useful, consider giving it a star!

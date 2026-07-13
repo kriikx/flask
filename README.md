@@ -2,18 +2,18 @@
 
 ##  Overview
 
-**MyTodo** is a lightweight and efficient task management web application built using **Flask** and **SQLite**. It enables users to create, update, and delete tasks with a clean and intuitive interface, helping streamline daily productivity.
+**MyTodo** is a lightweight and efficient task management web application built using **Flask** and **SQLite**. It enables users to create, update, and delete tasks with a clean and intuitive interface,helping streamline daily productivity.
 
 ---
 
 ##  Features
 
-*  Add new tasks with title and description
-*  Update existing tasks dynamically
-*  Delete completed or unnecessary tasks
-*  Dark mode support
-*  Toast notifications for user feedback
-*  Responsive UI built with Bootstrap
+*  Add new tasks with title and description.
+*  Update existing tasks dynamically.
+*  Delete completed or unnecessary tasks.
+*  Dark mode support.
+*  Toast notifications for user feedback.
+*  Responsive UI built with Bootstrap.
 
 ---
 
@@ -25,7 +25,7 @@
 | Flask      | Web framework       |
 | SQLite     | Database            |
 | HTML/CSS   | Structure & styling |
-| Bootstrap  | UI components       |
+| Bootstrap  | UI component       |
 | JavaScript | Interactivity       |
 
 ---
@@ -102,9 +102,8 @@ python app.py
 
 ##  Author
 
-**__Krish__**
+-> Kumar Krish
 
-*  Instagram: https://instagram.com/kriikx
 
 ---
 

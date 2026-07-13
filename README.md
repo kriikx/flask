@@ -139,20 +139,4 @@ Contributions, suggestions, and improvements are welcome.
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
-
-## 👨‍💻 Developer
-
-**Krish**
-
-GitHub: https://github.com/kriikx
-
-Instagram: https://instagram.com/kriikx
-
----
-
 ⭐ If you found this project useful, consider giving it a star!
